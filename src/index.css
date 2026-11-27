@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Noto Sans KR", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: "Playfair Display", "Noto Serif KR", Georgia, serif;
+  --font-handwriting: "Nanum Pen Script", "Gaegu", cursive;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #F6F6F4;
+    color: #18181B;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]) {
+    cursor: pointer;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.album-scrollbar::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+.album-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.album-scrollbar::-webkit-scrollbar-thumb {
+  background: #D4D4D8;
+  border-radius: 9999px;
+}
+
+.album-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #A1A1AA;
+}
